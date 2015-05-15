@@ -42,7 +42,7 @@ var allTitlePrice = items.filter (function(item){
   mike.push (item.title);
 
 });
-console.log(mike);
+// console.log(mike);
 
 var answer2 = document.querySelector('#answer2');
 answer2.innerText = '';
@@ -72,10 +72,24 @@ filteredItems.forEach (function(item){
 var answer3 = document.querySelector('#answer3');
 answer3.innerText = (britCurr);
 });
-// filteredItems.forEach(function(filteredItems){
-// answer3.appendChild(document.createTextNode(filteredItems));
 
 
+
+
+
+                // Question4
+
+var answer4 = document.querySelector('#answer4');
+answer4.innerText = ""
+// get all items made of wood
+var woodMaterial = items.filter(function (item) {
+ item.materials.forEach(function(w) {
+  if (w === "wood"){
+    answer4.appendChild(document.createTextNode(item.title + "- made of wood" + "\n"));
+  };
+
+ });
+});
 
 
 
