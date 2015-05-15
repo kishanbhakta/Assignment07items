@@ -1,4 +1,4 @@
-console.log(items);
+// console.log(items);
 
                   // Question1
 
@@ -55,14 +55,26 @@ answer2.appendChild(document.createTextNode(mike + "\n"));
 
 
                   // Question3
-var currCode = [];
 
+var britCurr = [];
 // get all currency codes
-var currencyCode = items.filter (function (item) {
-  return item.currency_code;
+var filteredItems = items.filter (function (item) {
+  return item.currency_code === "GBP";
 });
 
-// find GBP
+
+// find GBP to enter text w/in scope of var britCurr you have to britCurr.push
+filteredItems.forEach (function(item){
+
+    britCurr.push(item.title + "costs \u00A3" + item.price);
+
+
+var answer3 = document.querySelector('#answer3');
+answer3.innerText = (britCurr);
+});
+// filteredItems.forEach(function(filteredItems){
+// answer3.appendChild(document.createTextNode(filteredItems));
+
 
 
 
